@@ -1,0 +1,144 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Muli';
+    box-sizing: border-box;
+}
+
+blockquote, #logo, h1, h2 {
+    font-family: 'Lora';
+}
+
+.btn {
+    background-color: transparent;
+    border: 2px solid #00D1D1;
+    color: #00D1D1;
+    padding: 15px 20px;
+    border-radius: 6px;
+    transition: all .3s;
+}
+
+.btn:hover {
+    background-color: #00D1D1;
+    color: white;
+}
+
+.btn2 {
+    background-color: white;
+    color: #008484;
+    border: 0;
+    padding: 10px 15px;
+    border-radius: 6px;
+}
+
+header {
+    background-color: #008484;
+    color: white;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 1px 3px darkgray;
+}
+
+#logo {
+    font-size: x-large;
+    transition: all .3s;
+}
+
+#logo:hover, nav ul li:hover {
+    color: #00D1D1;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+}
+
+nav li {
+    list-style-type: none;
+    margin: 0 1em;
+}
+
+
+#carousel {
+    background-color: beige;
+    min-height: 60vh;
+    margin: 1em;
+}
+
+main {
+    min-height: 90vh;
+}
+
+blockquote {
+    background-color: #00D1D1;
+    color: white;
+    text-align: center;
+    font-size: x-large;
+    padding: 2em 15vw 4em;
+}
+
+#blockset {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   position: relative;
+   top: -5em;
+   margin: 0 4em;
+}
+
+#blockset div {
+    min-height: 25vh;
+    padding: 15px;
+    background-color: white;
+    margin: 1em;
+    box-shadow: 0px 2px 5px darkgray;
+    border-radius: 10px;
+    text-align: center; 
+    transition: all .3s;
+}
+
+#blockset div:hover {
+    transform: scale(1.03);
+}
+
+#blockset div h2, #blockset div p {
+    padding-bottom: 15px;
+}
+
+.blue {
+    color: #008484;
+}
+
+#jumbo {
+    background-image: url('https://farm6.staticflickr.com/5671/30540233590_bf83b7bef5_b.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: black;
+    background-repeat: no-repeat;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#volunteer {
+    height: 50vh;
+    padding: 0 10vw;
+}
+
+footer {
+    background-color: #008484;
+    color: white;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 2em;
+    padding: 3em 15vw;
+}
+
+footer i {
+    font-size: xx-large;
+    padding: 5px;
+}
