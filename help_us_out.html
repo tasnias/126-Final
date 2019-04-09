@@ -4,27 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='styles.css' rel='stylesheet' type='text/css' />
+    <link href='styles-ts.css' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Muli" rel="stylesheet">
+    <title>Help Us Out</title>
 </head>
 
 <body>
     <header>
-        <img class="header_logo" src="header_logo.png" alt="logo">
-        <h1 class="header_title">Charles House Association</h1>
-        <h3 class="header_phrase">Helping people age the way they have lived</h3>
+        <div id="logo">
+            Charles House Association
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="about_us.html">About Us</a>
+                </li>
+                <li>
+                    <a href="going_on.html">What's Going On</a>
+                </li>
+                <li >
+                    <a href="help_us_out.html" class="btn2">Help Out</a>
+                </li>
+            </ul>
+        </nav>
     </header>
-
-
-    <nav class="nav">
-        <ul class="nav_ul">
-            <li class="nav_item"><a href="#">Home</a></li>
-            <li class="nav_item"><a href="#">About Us</a></li>
-            <li class="nav_item"><a href="#">What's Going On?</a></li>
-            <li class="nav_item"><a href="#">Help Us Out</a></li>
-            <!-- ADD LINKS TO THE OTHER PAGES ONCE CREATED -->
-        </ul>
-    </nav> 
-
     <main>
         <h3>Volunteer</h3>
         <p>There are many opportunities to volunteer with Charles House participants at our Daytime Eldercare Program and our two Eldercare Homes in Chapel Hill. Here are just a few:
@@ -414,21 +421,34 @@
     </main>
 
     <footer>
-        <p class="contact_us">
-                Charles House Eldercare Center
-                <br>
-                    7511 Sunrise Road
-                    Chapel Hill, NC  27514
-                <br>
-                <br>
-                Phone: 919-967-7570 
-                Email: info@charleshouse.org
-                <br>
-                Hours:
-                    Monday-Friday, 7:30 am - 5:30 pm 
-        </p>
+        <div>
+            <h3>Contact</h3>
+            <p>info@charleshouse.org</p>
+            <p>919-967-7570</p>
+        </div>
+        <div>
+            <h3>Address</h3>
+            <p>7511 Sunrise Road</p>
+            <p>Chapel Hill, NC 27514</p>
+        </div>
+        <div>
+            <h3>Subscribe to our emails</h3>
+            <input type="text" placeholder="Email">
+            <button class="btn2">Submit</button>
+        </div>
+        <div>
+            <h3>Social</h3>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-facebook-f"></i>
+        </div>
+        <div>
+            <h3>Hours</h3>
+            <p>Monday-Friday</p>
+            <p>7:30am - 5:30pm</p>
+        </div>
+        <div>
+            <h3>Proud member of <b>North Carolina Center for Non-Profits</b></h3>
+        </div>
     </footer>
-
-
 </body>
 </html>
