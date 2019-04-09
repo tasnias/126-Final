@@ -1,0 +1,188 @@
+
+body {
+    display: grid;
+    grid-template-rows: 10% 10% 70% 10%;
+    grid-template-columns: 15% 60% 25%;
+ } 
+
+
+
+
+
+
+
+/* HEADER */
+
+header {
+    grid-row: 1 / 2;
+    grid-column: 1 / 4; 
+
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+
+    background: grey;
+    padding: 5px;
+}
+
+.header_logo {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2; 
+
+    height: 90px;
+    width: 120px;
+}
+
+.header_title {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3; 
+    
+    text-align: center;
+}
+
+.header_phrase {
+    grid-row: 1 / 2;
+    grid-column: 3 / 4; 
+
+    font-size: 20px;
+    text-align: right;
+}
+
+
+
+
+
+
+
+
+/* NAVIGATION BAR */
+
+.nav {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background: orange;
+
+    grid-row: 2 / 3;
+    grid-column: 1 / 4;
+}
+
+.nav_ul {
+    width: 100%;
+}
+
+.nav_item {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 24%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.nav_item a {
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+/* MAIN CONTENT */
+
+main {
+    grid-row: 3 / 4;
+    grid-column: 1 / 4;
+
+    background: grey;
+    padding-left: 1%;
+    padding-right: 1%;
+
+}
+
+/* MAIN --> HOME PAGE */
+.follow_us {
+    font-size: 20px;
+    text-align: center;
+}
+
+i {
+    font-size: 23px;
+}
+
+.house_image {
+    column-count: 2;
+}
+
+.download_link {
+    text-align: center;
+}
+
+
+
+
+/* MAIN --> ABOUT US PAGE */
+
+.boardof_directors {
+    column-count: 2;
+}
+
+.advisory_council {
+    column-count: 2;
+}
+
+.staff_list {
+    column-count: 2;
+}
+
+.directions {
+    column-count: 2;
+}
+
+
+/* MAIN --> WHAT's GOING ON PAGE */
+.download_link {
+    text-align: center;
+}
+
+.menu_image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* MAIN --> HELP US OUT PAGE */
+.gifts_honor {
+    column-count: 4;
+}
+.gifts_memory {
+    column-count: 4;
+}
+.grants {
+    column-count: 2;
+}
+.donations_funds {
+    column-count: 5;
+}
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+
+footer {
+    grid-row: 4 / 5;
+    grid-column: 1 / 4; 
+
+    background: orange;
+    text-align: center;
+}
