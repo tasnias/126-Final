@@ -5,19 +5,13 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
 blockquote, #logo, h1, h2 {
     font-family: 'Lora';
 }
-
-.btn {
-    background-color: transparent;
-    border: 2px solid #00D1D1;
-    color: #00D1D1;
-    padding: 15px 20px;
-    border-radius: 6px;
-    transition: all .3s;
-}
-
 
 header {
     background-color: #008484;
@@ -31,10 +25,11 @@ header {
 
 #logo {
     font-size: x-large;
+    color: white;
     transition: all .3s;
 }
 
-#logo:hover, nav ul li:hover {
+#logo:hover, nav ul li a:hover {
     color: #00D1D1;
 }
 
@@ -51,8 +46,17 @@ nav li {
 nav li a {
     text-decoration: none;
     color: white;
+    transition: all .3s;
 }
 
+.btn {
+    background-color: transparent;
+    border: 2px solid #00D1D1;
+    color: #00D1D1;
+    padding: 15px 20px;
+    border-radius: 6px;
+    transition: all .3s;
+}
 
 .btn:hover {
     background-color: #00D1D1;
@@ -62,9 +66,19 @@ nav li a {
 .btn2 {
     background-color: white;
     color: #008484;
-    border: 0;
-    padding: 10px 15px;
+    border: 2px solid white;
+    padding: 8px 13px;
     border-radius: 6px;
+    transition: all .3s;
+}
+
+.btn2:hover {
+    background-color: #008484;
+    color: white;
+    border: 0;
+    padding: 8px 13px;
+    border-radius: 6px;
+    border: 2px solid white;
 }
 
 
@@ -109,6 +123,10 @@ blockquote {
     transform: scale(1.03);
 }
 
+#blockset a:hover {
+    color: #00D1D1;
+}
+
 #blockset div h2, #blockset div p {
     padding-bottom: 15px;
 }
@@ -134,6 +152,32 @@ blockquote {
     padding: 0 10vw;
 }
 
+/*Non-Home Page Styling*/
+main a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.pad {
+    padding: 3em 5em;
+}
+
+main h1 {
+    color: #008484;
+    text-align: center;
+}
+
+h2, h3 {
+    padding-top: 10px;
+}
+
+main ul {
+    padding-left: 1em;
+}
+main li {
+    list-style-type: disc;
+}
+
 footer {
     background-color: #008484;
     color: white;
@@ -148,6 +192,7 @@ footer {
 footer i {
     font-size: xx-large;
     padding: 5px;
+    color: white;
 }
 footer h3 {
     padding-bottom: 3px;
@@ -164,3 +209,31 @@ footer input {
 footer input::placeholder {
     color: #00D1D1;
 }
+
+/*Collapsible*/
+.accordion {
+    cursor: pointer;
+    width: 100%;
+    transition: 0.4s;
+  }
+
+  .active, .accordion:hover {
+    color: #008484;
+  }
+
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+  }
+
+  .accordion:after {
+    content: '\002B';
+    font-weight: bold;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2212";
+  }
