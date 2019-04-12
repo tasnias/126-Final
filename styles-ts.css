@@ -152,6 +152,10 @@ blockquote {
     padding: 0 10vw;
 }
 
+
+
+
+
 /*Non-Home Page Styling*/
 main a {
     text-decoration: none;
@@ -237,3 +241,14 @@ footer input::placeholder {
   .active:after {
     content: "\2212";
   }
+
+
+
+
+
+
+@media only screen and (max-width: 480px) {
+
+
+
+}
