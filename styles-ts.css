@@ -214,6 +214,10 @@ footer input::placeholder {
     color: #00D1D1;
 }
 
+.email {
+    color: white;
+}
+
 /*Collapsible*/
 .accordion {
     cursor: pointer;
