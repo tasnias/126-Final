@@ -7,6 +7,7 @@
 
 a {
     text-decoration: none;
+    display: inline-block;
 }
 
 blockquote, #logo, h1, h2 {
@@ -33,7 +34,7 @@ header {
     color: #00D1D1;
 }
 
-nav ul{
+nav ul {
     display: flex;
     align-items: center;
 }
@@ -80,7 +81,6 @@ nav li a {
     border-radius: 6px;
     border: 2px solid white;
 }
-
 
 #carousel {
     background-color: beige;
@@ -147,22 +147,27 @@ blockquote {
     align-items: center;
 }
 
-#volunteer {
-    height: 50vh;
-    padding: 0 10vw;
+.volunteer {
+    height: 40vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5em;
+}
+
+.volunteer div {
+    display: flex;
+    justify-content: center;
 }
 
 /*Non-Home Page Styling*/
-main a {
-    text-decoration: none;
-    display: inline-block;
-}
 
 .pad {
     padding: 3em 5em;
 }
 
-main h1 {
+h1 {
     color: #008484;
     text-align: center;
 }
@@ -171,11 +176,12 @@ h2, h3 {
     padding-top: 10px;
 }
 
-main ul {
-    padding-left: 1em;
+p {
+    padding: 10px 0 0;
 }
-main li {
-    list-style-type: disc;
+
+main ul {
+    padding-left: 2em;
 }
 
 footer {
@@ -194,6 +200,7 @@ footer i {
     padding: 5px;
     color: white;
 }
+
 footer h3 {
     padding-bottom: 3px;
 }
@@ -215,25 +222,25 @@ footer input::placeholder {
     cursor: pointer;
     width: 100%;
     transition: 0.4s;
-  }
+}
 
-  .active, .accordion:hover {
+.active, .accordion:hover {
     color: #008484;
-  }
+}
 
-  .panel {
+.panel {
     padding: 0 18px;
     background-color: white;
     display: none;
     overflow: hidden;
-  }
+}
 
-  .accordion:after {
+.accordion:after {
     content: '\002B';
     font-weight: bold;
     margin-left: 5px;
-  }
-  
-  .active:after {
+}
+
+.active:after {
     content: "\2212";
-  }
+}
