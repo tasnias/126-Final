@@ -83,9 +83,29 @@ nav li a {
 }
 
 #carousel {
-    background-color: beige;
-    min-height: 60vh;
-    margin: 1em;
+    margin: 1em 0;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+#carousel img, #carousel div {
+    display: inline-block;
+    flex: 0 0 auto;
+    margin-right: 1em;
+    height: 80vh;
+    background: beige;
+    width: auto;
+}
+  
+#carousel {
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+    
+}
+
+#carousel::-webkit-scrollbar {
+    display: none;
 }
 
 main {
@@ -148,14 +168,22 @@ blockquote {
 }
 
 .volunteer {
-    height: 40vh;
     display: grid;
     grid-template-columns: 1fr 2fr;
     justify-content: center;
     align-items: center;
-    padding: 0 5em;
+    padding: 0em 5em;
+
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.center a {
+    margin: 1em;
+}
 
 /*Non-Home Page Styling*/
 main a {
@@ -186,6 +214,17 @@ main ul {
     padding-left: 2em;
 }
 
+#map {
+    display: flex;
+    justify-content: center;
+    margin: 1em;    
+}
+
+iframe {
+    width: 50vw;
+    height: 30vw;
+}
+
 footer {
     background-color: #008484;
     color: white;
@@ -201,6 +240,10 @@ footer i {
     font-size: xx-large;
     padding: 5px;
     color: white;
+}
+
+footer i:hover, a:hover {
+    color: #00D1D1;
 }
 
 footer h3 {
@@ -252,35 +295,68 @@ footer input::placeholder {
 }
 
 @media only screen and (max-width: 794px) {
+    header {
+        padding: 1em .5em;
+    }
+
+    #map iframe{
+        width: 90vw;
+        height: 100vw;
+    }
+
+    #logo {
+        text-align: center;
+    }
+
+    header li {
+        text-align: center;
+        font-size: smaller;
+    }
+
+    .volunteer {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 2em;
+        text-align: center;
+    }
+
+    .volunteer a {
+        margin: 1em;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pad {
+        padding: 2em;
+    }
 
     #blockset {
         display: grid;
         grid-template-columns: 1fr;
+        margin: 0;
     }
 
     footer {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
-        grid-row-gap: 1em;
+        grid-template-columns: 1fr 1fr;
         padding: 1em 5vw;
+        padding-left: 8vw;
+        grid-row-gap: 2em;
     }
 
     /*
     .btn2 --> make the "Donate" button in Nav bar responsive
     */
 
-    .calendar_image {
+    .calendar_image, .menu_image {
         display: block;
-        height: 40em;
-        width: 40em;
+        width: 80vw;
+        margin: 0 auto;
     }
-
-    .menu_image {
-        height: 35em;
-        width: 35em;
-    }
-
 
     /*
     WHAT's GOING ON
@@ -288,4 +364,19 @@ footer input::placeholder {
         make the table and column widths fluid, and reformat the table so it fits on smaller screens
         Change the display property of all the th and td elements to block, so each table cell starts on a new line. Then, you can  change formatting of the elements you do.
     */
+}
+
+
+@media only screen and (max-width: 426px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer div {
+        text-align: center;
+        padding-bottom: 1em;
+    }
+
 }
