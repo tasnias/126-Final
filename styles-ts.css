@@ -115,7 +115,7 @@ blockquote {
     margin: 1em;
     box-shadow: 0px 2px 5px darkgray;
     border-radius: 10px;
-    text-align: center; 
+    text-align: center;
     transition: all .3s;
 }
 
@@ -156,9 +156,11 @@ blockquote {
     padding: 0 5em;
 }
 
-.volunteer div {
-    display: flex;
-    justify-content: center;
+
+/*Non-Home Page Styling*/
+main a {
+    text-decoration: none;
+    display: inline-block;
 }
 
 /*Non-Home Page Styling*/
@@ -217,6 +219,10 @@ footer input::placeholder {
     color: #00D1D1;
 }
 
+.email {
+    color: white;
+}
+
 /*Collapsible*/
 .accordion {
     cursor: pointer;
@@ -243,4 +249,43 @@ footer input::placeholder {
 
 .active:after {
     content: "\2212";
+}
+
+@media only screen and (max-width: 794px) {
+
+    #blockset {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-row-gap: 1em;
+        padding: 1em 5vw;
+    }
+
+    /*
+    .btn2 --> make the "Donate" button in Nav bar responsive
+    */
+
+    .calendar_image {
+        display: block;
+        height: 40em;
+        width: 40em;
+    }
+
+    .menu_image {
+        height: 35em;
+        width: 35em;
+    }
+
+
+    /*
+    WHAT's GOING ON
+    - Make the table responsive:
+        make the table and column widths fluid, and reformat the table so it fits on smaller screens
+        Change the display property of all the th and td elements to block, so each table cell starts on a new line. Then, you can  change formatting of the elements you do.
+    */
 }
