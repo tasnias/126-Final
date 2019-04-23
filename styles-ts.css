@@ -270,6 +270,13 @@ footer input::placeholder {
     .btn2 --> make the "Donate" button in Nav bar responsive
     */
 
+    .filler_image {
+        display: block;
+        height: 20em;
+        width: 30em;
+        padding: 2%;
+    }
+
     .calendar_image {
         display: block;
         height: 40em;
@@ -281,12 +288,5 @@ footer input::placeholder {
         width: 35em;
     }
 
-
-    /* 
-    WHAT's GOING ON
-    - Make the table responsive: 
-        make the table and column widths fluid, and reformat the table so it fits on smaller screens
-        Change the display property of all the th and td elements to block, so each table cell starts on a new line. Then, you can  change formatting of the elements you do. 
-    */
 }
 
