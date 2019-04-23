@@ -7,6 +7,7 @@
 
 a {
     text-decoration: none;
+    display: inline-block;
 }
 
 blockquote, #logo, h1, h2 {
@@ -33,7 +34,7 @@ header {
     color: #00D1D1;
 }
 
-nav ul{
+nav ul {
     display: flex;
     align-items: center;
 }
@@ -81,11 +82,30 @@ nav li a {
     border: 2px solid white;
 }
 
-
 #carousel {
-    background-color: beige;
-    min-height: 60vh;
-    margin: 1em;
+    margin: 1em 0;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+#carousel img, #carousel div {
+    display: inline-block;
+    flex: 0 0 auto;
+    margin-right: 1em;
+    height: 80vh;
+    background: beige;
+    width: auto;
+}
+  
+#carousel {
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+    
+}
+
+#carousel::-webkit-scrollbar {
+    display: none;
 }
 
 main {
@@ -115,7 +135,7 @@ blockquote {
     margin: 1em;
     box-shadow: 0px 2px 5px darkgray;
     border-radius: 10px;
-    text-align: center; 
+    text-align: center;
     transition: all .3s;
 }
 
@@ -147,14 +167,23 @@ blockquote {
     align-items: center;
 }
 
-#volunteer {
-    height: 50vh;
-    padding: 0 10vw;
+.volunteer {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-content: center;
+    align-items: center;
+    padding: 0em 5em;
+
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+}
 
-
-
+.center a {
+    margin: 1em;
+}
 
 /*Non-Home Page Styling*/
 main a {
@@ -162,11 +191,13 @@ main a {
     display: inline-block;
 }
 
+/*Non-Home Page Styling*/
+
 .pad {
     padding: 3em 5em;
 }
 
-main h1 {
+h1 {
     color: #008484;
     text-align: center;
 }
@@ -175,11 +206,23 @@ h2, h3 {
     padding-top: 10px;
 }
 
-main ul {
-    padding-left: 1em;
+p {
+    padding: 10px 0 0;
 }
-main li {
-    list-style-type: disc;
+
+main ul {
+    padding-left: 2em;
+}
+
+#map {
+    display: flex;
+    justify-content: center;
+    margin: 1em;    
+}
+
+iframe {
+    width: 50vw;
+    height: 30vw;
 }
 
 footer {
@@ -198,6 +241,11 @@ footer i {
     padding: 5px;
     color: white;
 }
+
+footer i:hover, a:hover {
+    color: #00D1D1;
+}
+
 footer h3 {
     padding-bottom: 3px;
 }
@@ -223,47 +271,81 @@ footer input::placeholder {
     cursor: pointer;
     width: 100%;
     transition: 0.4s;
-  }
+}
 
-  .active, .accordion:hover {
+.active, .accordion:hover {
     color: #008484;
-  }
+}
 
-  .panel {
+.panel {
     padding: 0 18px;
     background-color: white;
     display: none;
     overflow: hidden;
-  }
+}
 
-  .accordion:after {
+.accordion:after {
     content: '\002B';
     font-weight: bold;
     margin-left: 5px;
-  }
-  
-  .active:after {
+}
+
+.active:after {
     content: "\2212";
-  }
-
-
-
-
-
+}
 
 @media only screen and (max-width: 794px) {
-   
+    header {
+        padding: 1em .5em;
+    }
+
+    #map iframe{
+        width: 90vw;
+        height: 100vw;
+    }
+
+    #logo {
+        text-align: center;
+    }
+
+    header li {
+        text-align: center;
+        font-size: smaller;
+    }
+
+    .volunteer {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 2em;
+        text-align: center;
+    }
+
+    .volunteer a {
+        margin: 1em;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pad {
+        padding: 2em;
+    }
+
     #blockset {
         display: grid;
         grid-template-columns: 1fr;
+        margin: 0;
     }
 
     footer {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
-        grid-row-gap: 1em;
+        grid-template-columns: 1fr 1fr;
         padding: 1em 5vw;
+        padding-left: 8vw;
+        grid-row-gap: 2em;
     }
 
     /*
@@ -279,14 +361,23 @@ footer input::placeholder {
 
     .calendar_image {
         display: block;
-        height: 40em;
-        width: 40em;
-    }
-
-    .menu_image {
-        height: 35em;
-        width: 35em;
+        width: 80vw;
+        margin: 0 auto;
     }
 
 }
 
+
+@media only screen and (max-width: 426px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer div {
+        text-align: center;
+        padding-bottom: 1em;
+    }
+
+}
