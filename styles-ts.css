@@ -95,7 +95,6 @@ nav li a {
     margin-right: 1em;
     height: 80vh;
     background: beige;
-    width: auto;
 }
   
 #carousel {
@@ -151,12 +150,33 @@ blockquote {
     padding-bottom: 15px;
 }
 
-.blue {
+td:first-child {
+    text-align: center;
+}
+
+.blue, .email {
     color: #008484;
 }
 
+.email:visited {
+    color: #008484;
+}
+
+.col1 {
+    width: 15%;
+}
+
+
+.col2 {
+    width: 15%;
+}
+
+.col3 {
+    width: 60%;
+}
+
 #jumbo {
-    background-image: url('https://farm6.staticflickr.com/5671/30540233590_bf83b7bef5_b.jpg');
+    background-image: url('images/jumbo_bg.jpg');
     background-size: cover;
     background-position: center;
     background-color: black;
@@ -172,7 +192,7 @@ blockquote {
     grid-template-columns: 1fr 2fr;
     justify-content: center;
     align-items: center;
-    padding: 0em 5em;
+    padding: 2em 10vw;
 
 }
 
@@ -262,8 +282,12 @@ footer input::placeholder {
     color: #00D1D1;
 }
 
-.email {
+footer .email {
     color: white;
+}
+
+footer .email:hover {
+    color: #00D1d1;
 }
 
 /*Collapsible*/
@@ -292,6 +316,11 @@ footer input::placeholder {
 
 .active:after {
     content: "\2212";
+}
+
+.calendar {
+    width: 40vw;
+    margin: 0 auto;
 }
 
 @media only screen and (max-width: 794px) {
@@ -359,7 +388,7 @@ footer input::placeholder {
         padding: 2%;
     }
 
-    .calendar_image {
+    .calendar {
         display: block;
         width: 80vw;
         margin: 0 auto;
