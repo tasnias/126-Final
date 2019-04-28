@@ -359,6 +359,13 @@ footer input::placeholder {
         padding: 2%;
     }
 
+    .volunteer_image {
+        display: block;
+        height: 27em;
+        width: 25em;
+        padding: 2%;
+    }
+
     .calendar_image {
         display: block;
         width: 80vw;
