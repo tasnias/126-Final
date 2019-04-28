@@ -198,7 +198,9 @@ td:first-child {
 
 .center {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 1em 0;
 }
 
 .center a {
@@ -318,9 +320,13 @@ footer .email:hover {
     content: "\2212";
 }
 
+.calendars {
+    display: flex;
+}
+
 .calendar {
-    width: 40vw;
-    margin: 0 auto;
+    width: 40%;
+    height: 40%;
 }
 
 @media only screen and (max-width: 794px) {
@@ -377,10 +383,6 @@ footer .email:hover {
         grid-row-gap: 2em;
     }
 
-    /*
-    .btn2 --> make the "Donate" button in Nav bar responsive
-    */
-
     .filler_image {
         display: block;
         height: 20em;
@@ -395,10 +397,10 @@ footer .email:hover {
         padding: 2%;
     }
 
-    .calendar_image {
-        display: block;
-        width: 80vw;
-        margin: 0 auto;
+    .calendar {
+        width: 90%;
+        height: 50%;
+        padding: 1em;
     }
 
 }
@@ -414,6 +416,11 @@ footer .email:hover {
     footer div {
         text-align: center;
         padding-bottom: 1em;
+    }
+
+    .filler_image, .center img {
+        width: 90%;
+        height: 90%;
     }
 
 }
